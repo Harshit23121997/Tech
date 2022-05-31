@@ -19,6 +19,7 @@ jobs:
           aws-access-key-id: 'AKIAZQSXQGB4O4LICDNC'
           aws-secret-access-key: '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'
           aws-region: ap-south-1
+      - name: deploy 
         run: |
           zip -j deploy.zip ./../Tech/*
           aws lambda update-function-code --function-name=arn:aws:lambda:ap-south-1:654092284024:function:abc --zip-file=fileb://deploy.zip
